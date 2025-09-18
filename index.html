@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoGlow Skincare — Natural & Sustainable Skincare</title>
+  <meta name="description" content="EcoGlow Skincare — 100% natural, cruelty-free and eco-friendly skincare products. Organic face creams, vitamin C serum, herbal body lotion, SPF50 mineral sunscreen.">
+  <meta name="author" content="EcoGlow Skincare">
+  <link rel="icon" href="data:,"><style>
+    :root{--green:#1f8f4a;--dark:#0f1724;--muted:#6b7280;--card:#ffffff;--accent:#f7fdf8}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; color:var(--dark); background:linear-gradient(180deg,#fbfdfb 0%, #ffffff 100%)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:48px;height:48px;border-radius:8px;object-fit:cover;border:2px solid rgba(0,0,0,0.05)}
+    nav a{margin-left:18px;text-decoration:none;color:var(--dark);font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:36px 0}
+    .hero .eyebrow{color:var(--green);font-weight:700;margin-bottom:8px}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--green);color:white;padding:12px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+    .btn.ghost{background:transparent;color:var(--dark);border:2px solid rgba(15,23,36,0.06)}
+
+    .banner-card{background:var(--card);border-radius:14px;box-shadow:0 6px 18px rgba(15,23,36,0.06);overflow:hidden}
+    .banner-card img{width:100%;height:100%;display:block}
+
+    /* Features */
+    .features{display:flex;gap:16px;margin:28px 0}
+    .feature{flex:1;background:var(--card);padding:12px;border-radius:10px;text-align:center}
+    .feature h4{margin:8px 0 0}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:24px 0}
+    .product{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,36,0.04);}
+    .product img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .product h3{margin:12px 0 6px;font-size:18px}
+    .product p{margin:0;color:var(--muted);font-size:14px}
+
+    /* USP row */
+    .usp{display:flex;gap:16px;margin:24px 0}
+    .usp .item{flex:1;padding:18px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#f9fff7);border:1px solid rgba(31,143,74,0.06)}
+
+    /* Footer */
+    footer{margin-top:36px;padding:24px 0;border-top:1px dashed rgba(15,23,36,0.04)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    /* Responsive */
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.jpeg" alt="EcoGlow logo">
+        <div>
+          <strong>EcoGlow Skincare</strong>
+          <div style="font-size:12px;color:var(--muted)">Natural · Cruelty-free · Sustainable</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Sustainable Beauty</div>
+          <h1>Glow Naturally. Protect the Planet.</h1>
+          <p>EcoGlow Skincare crafts 100% natural, dermatologist-tested skincare made with ethically sourced botanicals and eco-friendly packaging. Designed for conscious shoppers who want results — without compromise.</p>
+          <div class="cta-row">
+            <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Click to Discover</button>
+            <button class="btn ghost" onclick="window.location.href='mailto:hello@ecoglowskin.com?subject=Product%20Inquiry'">Contact Us</button>
+          </div>
+          <div style="margin-top:18px;font-size:14px;color:var(--muted)">Free shipping on orders above ₹999 • Trusted by 10,000+ customers</div>
+        </div>
+
+        <div class="banner-card">
+          <img src="banner.png" alt="Eco-friendly skincare banner">
+        </div>
+      </section>
+
+      <section class="features" aria-label="key features">
+        <div class="feature">
+          <strong>100% Natural</strong>
+          <h4>Botanical formulations</h4>
+        </div>
+        <div class="feature">
+          <strong>Cruelty-Free</strong>
+          <h4>Never tested on animals</h4>
+        </div>
+        <div class="feature">
+          <strong>Eco Packaging</strong>
+          <h4>Recyclable & minimal waste</h4>
+        </div>
+      </section>
+
+      <section id="products">
+        <h2 style="margin-bottom:6px">Featured Products</h2>
+        <p style="margin-top:0;color:var(--muted)">Hand-picked favorites — clean ingredients, proven results.</p>
+
+        <div class="products">
+          <article class="product">
+            <img src="facecream.png" alt="Organic Face Cream">
+            <h3>Organic Face Cream</h3>
+            <p>Deep hydration with jojoba & shea butter. Lightweight, non-greasy finish.</p>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <button class="btn" onclick="window.location.href='mailto:hello@ecoglowskin.com?subject=Organic%20Face%20Cream%20Inquiry'">Enquire</button>
+              <button class="btn ghost" onclick="alert('Added to demo cart — this is a demo page')">Add to demo cart</button>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="Serum.png" alt="Vitamin C Serum">
+            <h3>Natural Vitamin C Serum</h3>
+            <p>Brightening serum with stabilized vitamin C and hyaluronic acid for glow & firmness.</p>
+          </article>
+
+          <article class="product">
+            <img src="lotion.png" alt="Herbal Body Lotion">
+            <h3>Herbal Body Lotion</h3>
+            <p>Soothing oat & aloe formula — fast-absorbing and nourishing.</p>
+          </article>
+
+          <article class="product">
+            <img src="sunscreen.png" alt="Mineral Sunscreen SPF 50">
+            <h3>Mineral Sunscreen SPF 50</h3>
+            <p>Broad-spectrum mineral protection with a soft matte finish. Reef-friendly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>Why EcoGlow?</h2>
+        <div class="usp" style="margin-top:8px">
+          <div class="item">
+            <strong>Dermatologist Tested</strong>
+            <p style="color:var(--muted);margin-top:6px">Formulated and tested by skincare professionals for safety and efficacy.</p>
+          </div>
+          <div class="item">
+            <strong>Sustainability First</strong>
+            <p style="color:var(--muted);margin-top:6px">Minimal plastic, recyclable materials, and responsibly sourced ingredients.</p>
+          </div>
+          <div class="item">
+            <strong>Community Trusted</strong>
+            <p style="color:var(--muted);margin-top:6px">Loved by over 10,000 conscious customers (demo).</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Get in touch</h2>
+        <p style="color:var(--muted)">Questions about ingredients, wholesale, or partnership? We’d love to hear from you.</p>
+        <div class="contact-grid" style="margin-top:12px">
+          <div style="background:var(--card);padding:14px;border-radius:10px">
+            <h3 style="margin:0 0 6px">Contact</h3>
+            <p style="margin:0;color:var(--muted)">Email: <a href="mailto:hello@ecoglowskin.com">hello@ecoglowskin.com</a><br>Phone: <a href="tel:+910000000000">+91 00000 00000</a></p>
+            <p style="margin-top:10px;font-size:13px;color:var(--muted)"><strong>Location:</strong> Demo Tower, Panaji, Goa, India</p>
+          </div>
+
+          <div style="background:var(--card);padding:14px;border-radius:10px">
+            <h3 style="margin:0 0 6px">Send us a message</h3>
+            <form onsubmit="event.preventDefault();alert('Thanks — this is a demo contact form. Email: hello@ecoglowskin.com');" style="display:flex;flex-direction:column;gap:8px">
+              <input required placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6e6e6">
+              <input required placeholder="Email" type="email" style="padding:10px;border-radius:8px;border:1px solid #e6e6e6">
+              <textarea required placeholder="Message" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6e6e6"></textarea>
+              <div style="display:flex;gap:8px">
+                <button class="btn" type="submit">Send</button>
+                <button class="btn ghost" type="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div style="font-size:14px;color:var(--muted)">© EcoGlow Skincare — Natural & Organic Skincare</div>
+        <div style="font-size:14px;color:var(--muted)">Website: <a href="https://www.ecoglowskin.com">www.ecoglowskin.com</a> • Email: <a href="mailto:hello@ecoglowskin.com">hello@ecoglowskin.com</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Small enhancements
+    (function(){
+      // smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'});});
+      });
+    })();
+  </script>
+</body>
+</html>
